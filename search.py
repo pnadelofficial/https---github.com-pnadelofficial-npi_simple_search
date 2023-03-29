@@ -25,7 +25,7 @@ if 'start' not in st.session_state:
 def get_data():
     # sort by individual's transcript
     statements_url = 'https://drive.google.com/drive/folders/1QwLTtOuKq315_GikEPJRkvZrTIVN6WsC?usp=share_link'
-    transcript_url = 'https://drive.google.com/drive/folders/1iWUCIiFLt8coLwRFzz0MCJwcoANWrk5p?usp=sharing'
+    transcript_url = 'https://drive.google.com/drive/folders/1l9TlasJxS6uGyCiyUSIzqNTvC1CGsTU0?usp=sharing'
     gdown.download_folder(statements_url, quiet=True, use_cookies=False)
     gdown.download_folder(transcript_url, quiet=True, use_cookies=False)
 
