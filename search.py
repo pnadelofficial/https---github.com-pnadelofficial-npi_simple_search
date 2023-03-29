@@ -25,7 +25,7 @@ if 'start' not in st.session_state:
 def get_data():
     # sort by individual's transcript
     statements_url = 'https://drive.google.com/drive/folders/1QwLTtOuKq315_GikEPJRkvZrTIVN6WsC?usp=share_link'
-    transcript_url = 'https://drive.google.com/drive/folders/1yYIYV86Q_B7VdgF9zRLfzPLLes94Fm7D?usp=share_link'
+    transcript_url = 'https://drive.google.com/drive/folders/12lY7qh5TgqkaK9MiIlDV22Ig0RWD4Vgo?usp=sharing'
     gdown.download_folder(statements_url, quiet=True, use_cookies=False)
     gdown.download_folder(transcript_url, quiet=True, use_cookies=False)
 
@@ -44,7 +44,6 @@ def no_punct(word):
     return ''.join([letter for letter in word if letter not in punctuation.replace('-', '')])
 
 def inject_highlights(text, searches):
-    print(searches)
     inject = f"""
         <p>
         {' '.join([f"<span style='background-color:#fdd835'>{word}</span>" if no_punct(word.lower()) in searches else word for word in text.split()])}
