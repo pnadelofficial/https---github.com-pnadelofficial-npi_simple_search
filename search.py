@@ -37,7 +37,7 @@ def get_data():
 
     at_url = 'https://drive.google.com/file/d/1oZv72Fuy6sbCtkLzzEQmSPnMiu93gHVw/view?usp=sharing'
     output = 'all_transcripts.csv'
-    gdown.download(at_url, output, quiet=True)
+    gdown.download(at_url, output, quiet=True, fuzzy=True)
     transcripts = pd.read_csv('all_transcripts.csv').rename(columns={'index':'org_index'}).dropna()
     ref = pd.read_csv('reference.csv')
     ws_ref = pd.read_csv('ws_reference.csv')
