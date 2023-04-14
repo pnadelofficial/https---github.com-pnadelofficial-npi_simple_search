@@ -74,11 +74,12 @@ def display_text(result, query, transcript=True, sem_search=False, index=None):
         else:
             searches = query.split()
         searches = [search.strip().lower() for search in searches]  
-
-        context = 0
-        if st.button('Increase context size', key=index):
-            context += 1
-            print(context)
+        
+        if sem_search: 
+            context = 0
+            if st.button('Increase context size', key=index):
+                context += 1
+                print(context)
 
         if (sem_search) and (context > 0):
             before, after = [], [] 
