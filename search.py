@@ -11,7 +11,7 @@ from whoosh.qparser import QueryParser
 import gdown
 from txtai.embeddings import Embeddings
 
-st.title('NPI Data Simple Search')
+st.title('NPI Data Search Engine')
 
 if 'page_count' not in st.session_state:
     st.session_state['page_count'] = 1
