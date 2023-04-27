@@ -26,7 +26,7 @@ if 'start' not in st.session_state:
 def get_data():
     # sort by individual's transcript
     statements_url = 'https://drive.google.com/drive/folders/1QwLTtOuKq315_GikEPJRkvZrTIVN6WsC?usp=share_link'
-    transcript_url = 'https://drive.google.com/drive/folders/1iWUCIiFLt8coLwRFzz0MCJwcoANWrk5p?usp=sharing' 
+    transcript_url = 'https://drive.google.com/drive/folders/1l9TlasJxS6uGyCiyUSIzqNTvC1CGsTU0?usp=sharing' 
     gdown.download_folder(statements_url, quiet=True, use_cookies=False)
     gdown.download_folder(transcript_url, quiet=True, use_cookies=False)
 
@@ -148,7 +148,7 @@ def index_search(dirname, search_fields, search_query, sem_option, start, en):
                 results = s.search(q,limit=None)
                 to_full_file = [(f"{ws_reference.iloc[int(res['org'])].filename}", res['content']) for res in results]
 
-                to_page = results[s:en]
+                to_page = results[start:en]
                 to_spec_file = [(f"{ws_reference.iloc[int(res['org'])].filename}", res['content']) for res in to_page]
 
                 for result in to_page:
