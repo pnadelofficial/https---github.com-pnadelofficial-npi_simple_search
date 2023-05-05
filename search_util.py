@@ -12,20 +12,18 @@ from sentence_transformers import SentenceTransformer
 def get_data():
     #simple
     ## statments
-    print('simple statements')
     statements_url = 'https://drive.google.com/drive/folders/1kJLVteheTQcONEocW4gWlhgC5EOm_4qP?usp=sharing'
     gdown.download_folder(statements_url, quiet=True, use_cookies=False)
     ## transcripts
-    print('simple transcripts')
     transcript_url = 'https://drive.google.com/drive/folders/1y7FX45iny1fcQ9jjGebNqmtN28VcS4mU?usp=sharing'
     gdown.download_folder(transcript_url, quiet=True, use_cookies=False)
 
     #semantic
     model_url = 'https://drive.google.com/drive/folders/1iqutHw9dJGqSnRBgrdvegmWEJ-4najWN?usp=sharing'
     gdown.download_folder(model_url, quiet=True, use_cookies=False)
-    # ss_model = SentenceTransformer('npi_ft542023_L12_d')
+    ss_model = SentenceTransformer('npi_ft542023_L12')
     ## transcripts
-    transcript_sem_search_url = 'https://drive.google.com/drive/folders/15Sdn6R1e-sd_YsPmZcmu7y1ts5hzIzBJ?usp=sharing'
+    transcript_sem_search_url = 'https://drive.google.com/drive/folders/1u5YABhLt-wv0iur-WSDR61uc7bhEkVbg?usp=sharing'
     gdown.download_folder(transcript_sem_search_url, quiet=True, use_cookies=False)
     t_embeddings = Embeddings()
     t_embeddings.load("npi_transcript_sem_search_index_d")
@@ -37,7 +35,7 @@ def get_data():
 
     #org data
     ## transcripts
-    at_url = 'https://drive.google.com/file/d/1oHK8wWyl5SJ_8CfZ74rV3AZXODlAT97T/view?usp=sharing'
+    at_url = 'https://drive.google.com/file/d/1_i8FbLi_8SKXkICj3pb-_oor7fklIeaf/view?usp=sharing'
     t_output = 'all_transcripts_d.csv'
     gdown.download(at_url, t_output, quiet=True, fuzzy=True)
     transcripts = pd.read_csv('all_transcripts_d.csv').rename(columns={'index':'org_index'}).dropna()
@@ -49,10 +47,10 @@ def get_data():
 
     #reference data
     ## transcripts
-    t_ref_url = 'https://drive.google.com/file/d/13gX-w-YQUdh8MoH8Dfe0Jw58-qTB41bx/view?usp=sharing'
-    t_ref_output = 'transcript_referece_d.csv'
+    t_ref_url = 'https://drive.google.com/file/d/1uPdn6lPjgHmUlBeoEXOsfU28JRhY_WT7/view?usp=sharing'
+    t_ref_output = 'transcript_reference_d.csv'
     gdown.download(t_ref_url, t_ref_output, quiet=True, fuzzy=True)
-    t_ref = pd.read_csv('transcript_referece_d.csv')
+    t_ref = pd.read_csv('transcript_reference_d.csv')
     ## statements
     w_ref_url = 'https://drive.google.com/file/d/1WYsv6n-2hIlvE7GdziEmmg8ARNfc9VSA/view?usp=sharing'
     w_ref_output = 'ws_reference_d.csv'
