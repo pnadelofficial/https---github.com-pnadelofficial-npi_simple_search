@@ -61,7 +61,7 @@ def get_data():
 #     model_path = "cardiffnlp/twitter-xlm-roberta-base-sentiment"
 #     sentiment_task = pipeline("sentiment-analysis", model=model_path, tokenizer=model_path)
 
-    return t_ref, w_ref, t_embeddings, w_embeddings, transcripts, written_statements, sentiment_task
+    return t_ref, w_ref, t_embeddings, w_embeddings, transcripts, written_statements# , sentiment_task
 
 class Searcher:
     """
