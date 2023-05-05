@@ -25,7 +25,7 @@ option = st.selectbox(
     'What documents would you like to search in?',
     ('Transcripts', 'Written Statements')
 )
-
+st.write("Sentiment Analysis is not working (memory issues). Please do not select 'Yes' for the time being. -- PN")
 sa_option = st.selectbox(
     'Would you like to add sentiment analysis scores?',
     ('No', 'Yes')
