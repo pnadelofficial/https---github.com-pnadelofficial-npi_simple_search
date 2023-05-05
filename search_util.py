@@ -57,9 +57,9 @@ def get_data():
     gdown.download(w_ref_url, w_ref_output, quiet=True, fuzzy=True)
     w_ref = pd.read_csv('ws_reference_d.csv')
 
-    # for sentiment analysis
-    model_path = "cardiffnlp/twitter-xlm-roberta-base-sentiment"
-    sentiment_task = pipeline("sentiment-analysis", model=model_path, tokenizer=model_path)
+#     # for sentiment analysis
+#     model_path = "cardiffnlp/twitter-xlm-roberta-base-sentiment"
+#     sentiment_task = pipeline("sentiment-analysis", model=model_path, tokenizer=model_path)
 
     return t_ref, w_ref, t_embeddings, w_embeddings, transcripts, written_statements, sentiment_task
 
