@@ -19,7 +19,7 @@ def get_data():
 
     #semantic
     ## transcripts
-    transcript_sem_search_url = 'https://drive.google.com/drive/folders/1SHQ2SZFBUS_qp8QOTmDLlMkt78L6yj89?usp=sharing'
+    transcript_sem_search_url = 'https://drive.google.com/drive/folders/15Sdn6R1e-sd_YsPmZcmu7y1ts5hzIzBJ?usp=sharing'
     gdown.download_folder(transcript_sem_search_url, quiet=True, use_cookies=False)
     t_embeddings = Embeddings()
     t_embeddings.load("npi_transcript_sem_search_index_d")
