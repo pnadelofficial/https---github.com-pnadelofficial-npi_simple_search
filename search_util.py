@@ -17,7 +17,7 @@ def get_data():
     gdown.download_folder(statements_url, quiet=True, use_cookies=False)
     ## transcripts
     print('simple transcripts')
-    transcript_url = 'https://drive.google.com/drive/folders/1mLsdMDc1jB-sc8gNq7lLZe4bLbAXKXBK?usp=sharing'
+    transcript_url = 'https://drive.google.com/drive/folders/1y7FX45iny1fcQ9jjGebNqmtN28VcS4mU?usp=sharing'
     gdown.download_folder(transcript_url, quiet=True, use_cookies=False)
 
     #semantic
