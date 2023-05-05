@@ -1,6 +1,7 @@
 gdown==4.6.4
 pandas==1.5.2
 plotly==5.12.0
+sentence-transformers==2.2.2
 sentencepiece==0.1.98
 streamlit==1.21.0
 streamlit_plotly_events==0.0.6
