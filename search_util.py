@@ -6,6 +6,7 @@ from whoosh import index, qparser
 import gdown
 from txtai.embeddings import Embeddings
 from transformers import pipeline
+from sentence_transformers import SentenceTransformer
 
 @st.cache_resource
 def get_data():
