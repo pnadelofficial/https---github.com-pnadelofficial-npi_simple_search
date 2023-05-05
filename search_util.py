@@ -21,7 +21,7 @@ def get_data():
     #semantic
     model_url = 'https://drive.google.com/drive/folders/1iqutHw9dJGqSnRBgrdvegmWEJ-4najWN?usp=sharing'
     gdown.download_folder(model_url, quiet=True, use_cookies=False)
-    ss_model = SentenceTransformer('npi_ft542023_L12')
+    ss_model = SentenceTransformer('npi_ft542023_L12_d')
     ## transcripts
     transcript_sem_search_url = 'https://drive.google.com/drive/folders/15Sdn6R1e-sd_YsPmZcmu7y1ts5hzIzBJ?usp=sharing'
     gdown.download_folder(transcript_sem_search_url, quiet=True, use_cookies=False)
