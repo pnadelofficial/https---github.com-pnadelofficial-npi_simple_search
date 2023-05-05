@@ -12,47 +12,47 @@ from sentence_transformers import SentenceTransformer
 def get_data():
     #simple
     ## statments
-    statements_url = 'https://drive.google.com/drive/folders/1kJLVteheTQcONEocW4gWlhgC5EOm_4qP?usp=sharing'
+    statements_url = 'https://drive.google.com/drive/folders/1kJLVteheTQcONEocW4gWlhgC5EOm_4qP?usp=sharing&confirm=t'
     gdown.download_folder(statements_url, quiet=True, use_cookies=False)
     ## transcripts
-    transcript_url = 'https://drive.google.com/drive/folders/1y7FX45iny1fcQ9jjGebNqmtN28VcS4mU?usp=sharing'
+    transcript_url = 'https://drive.google.com/drive/folders/1y7FX45iny1fcQ9jjGebNqmtN28VcS4mU?usp=sharing&confirm=t'
     gdown.download_folder(transcript_url, quiet=True, use_cookies=False)
 
     #semantic
-    model_url = 'https://drive.google.com/drive/folders/1iqutHw9dJGqSnRBgrdvegmWEJ-4najWN?usp=sharing'
+    model_url = 'https://drive.google.com/drive/folders/1iqutHw9dJGqSnRBgrdvegmWEJ-4najWN?usp=sharing&confirm=t'
     gdown.download_folder(model_url, quiet=True, use_cookies=False)
     ss_model = SentenceTransformer('npi_ft542023_L12')
     ## transcripts
-    transcript_sem_search_url = 'https://drive.google.com/drive/folders/1u5YABhLt-wv0iur-WSDR61uc7bhEkVbg?usp=sharing'
+    transcript_sem_search_url = 'https://drive.google.com/drive/folders/1u5YABhLt-wv0iur-WSDR61uc7bhEkVbg?usp=sharing&confirm=t'
     gdown.download_folder(transcript_sem_search_url, quiet=True, use_cookies=False)
     t_embeddings = Embeddings()
     t_embeddings.load("npi_transcript_sem_search_index_d")
     ## statements
-    ws_sem_search_url = 'https://drive.google.com/drive/folders/12Ym7Ya1C1mzIlVvvOrv42pE3rV2dsf4j?usp=sharing'
+    ws_sem_search_url = 'https://drive.google.com/drive/folders/12Ym7Ya1C1mzIlVvvOrv42pE3rV2dsf4j?usp=sharing&confirm=t'
     gdown.download_folder(ws_sem_search_url, quiet=True, use_cookies=False)
     w_embeddings = Embeddings()
     w_embeddings.load("npi_ws_sem_search_index_d")
 
     #org data
     ## transcripts
-    at_url = 'https://drive.google.com/file/d/1_i8FbLi_8SKXkICj3pb-_oor7fklIeaf/view?usp=sharing'
+    at_url = 'https://drive.google.com/file/d/1_i8FbLi_8SKXkICj3pb-_oor7fklIeaf/view?usp=sharing&confirm=t'
     t_output = 'all_transcripts_d.csv'
     gdown.download(at_url, t_output, quiet=True, fuzzy=True)
     transcripts = pd.read_csv('all_transcripts_d.csv').rename(columns={'index':'org_index'}).dropna()
     ## statements
-    ast_url = 'https://drive.google.com/file/d/1MmKY3P4tUMP6IQkdBy6Eo8yGpnubTjBY/view?usp=sharing'
+    ast_url = 'https://drive.google.com/file/d/1MmKY3P4tUMP6IQkdBy6Eo8yGpnubTjBY/view?usp=sharing&confirm=t'
     w_output = 'all_written_statements_d.csv'
     gdown.download(ast_url, w_output, quiet=True, fuzzy=True)
     written_statements = pd.read_csv('all_written_statements_d.csv').rename(columns={'index':'org_index'}).dropna()
 
     #reference data
     ## transcripts
-    t_ref_url = 'https://drive.google.com/file/d/1uPdn6lPjgHmUlBeoEXOsfU28JRhY_WT7/view?usp=sharing'
+    t_ref_url = 'https://drive.google.com/file/d/1uPdn6lPjgHmUlBeoEXOsfU28JRhY_WT7/view?usp=sharing&confirm=t'
     t_ref_output = 'transcript_reference_d.csv'
     gdown.download(t_ref_url, t_ref_output, quiet=True, fuzzy=True)
     t_ref = pd.read_csv('transcript_reference_d.csv')
     ## statements
-    w_ref_url = 'https://drive.google.com/file/d/1WYsv6n-2hIlvE7GdziEmmg8ARNfc9VSA/view?usp=sharing'
+    w_ref_url = 'https://drive.google.com/file/d/1WYsv6n-2hIlvE7GdziEmmg8ARNfc9VSA/view?usp=sharing&confirm=t'
     w_ref_output = 'ws_reference_d.csv'
     gdown.download(w_ref_url, w_ref_output, quiet=True, fuzzy=True)
     w_ref = pd.read_csv('ws_reference_d.csv')
