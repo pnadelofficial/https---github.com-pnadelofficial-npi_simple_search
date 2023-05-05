@@ -12,7 +12,7 @@ if 'to_see' not in st.session_state:
 if 'start' not in st.session_state:
     st.session_state['start'] = 0
 
-t_ref, w_ref, t_embeddings, w_embeddings, transcripts, written_statements, sentiment_task = search_util.get_data() 
+t_ref, w_ref, t_embeddings, w_embeddings, transcripts, written_statements = search_util.get_data() #, sentiment_task
 
 search = st.text_input('Search for a word or phrase')
 
@@ -25,6 +25,7 @@ option = st.selectbox(
     'What documents would you like to search in?',
     ('Transcripts', 'Written Statements')
 )
+
 st.write("Sentiment Analysis is not working (memory issues). Please do not select 'Yes' for the time being. -- PN")
 sa_option = st.selectbox(
     'Would you like to add sentiment analysis scores?',
