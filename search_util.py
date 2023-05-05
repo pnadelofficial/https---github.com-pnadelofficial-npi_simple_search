@@ -22,12 +22,12 @@ def get_data():
     transcript_sem_search_url = 'https://drive.google.com/drive/folders/1SHQ2SZFBUS_qp8QOTmDLlMkt78L6yj89?usp=sharing'
     gdown.download_folder(transcript_sem_search_url, quiet=True, use_cookies=False)
     t_embeddings = Embeddings()
-    t_embeddings.load("npi_transcript_sem_search_index")
+    t_embeddings.load("npi_transcript_sem_search_index_d")
     ## statements
     ws_sem_search_url = 'https://drive.google.com/drive/folders/12Ym7Ya1C1mzIlVvvOrv42pE3rV2dsf4j?usp=sharing'
     gdown.download_folder(ws_sem_search_url, quiet=True, use_cookies=False)
     w_embeddings = Embeddings()
-    w_embeddings.load("npi_ws_sem_search_index")
+    w_embeddings.load("npi_ws_sem_search_index_d")
 
     #org data
     ## transcripts
