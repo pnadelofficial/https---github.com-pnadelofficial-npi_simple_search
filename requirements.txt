@@ -3,5 +3,6 @@ pandas==1.5.2
 plotly==5.12.0
 streamlit==1.21.0
 streamlit_plotly_events==0.0.6
-Whoosh==2.7.4
+transformers==4.26.1
 txtai==5.4.0
+Whoosh==2.7.4
