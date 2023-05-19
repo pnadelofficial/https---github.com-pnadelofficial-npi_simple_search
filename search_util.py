@@ -13,10 +13,10 @@ def get_data():
     #simple
     ## statments
     statements_id = '1kJLVteheTQcONEocW4gWlhgC5EOm_4qP'
-    gdown.download_folder(statements_id, quiet=True, use_cookies=False)
+    gdown.download_folder(id=statements_id, quiet=True, use_cookies=False)
     ## transcripts
     transcript_id = '1LIl8jfzfrQQD6wkOYpvM0osYSt3dGog_'
-    gdown.download_folder(transcript_id, quiet=True, use_cookies=False)
+    gdown.download_folder(id=transcript_id, quiet=True, use_cookies=False)
 
     #semantic
     model_url = 'https://drive.google.com/drive/folders/1iqutHw9dJGqSnRBgrdvegmWEJ-4najWN?usp=sharing&confirm=t'
