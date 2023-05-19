@@ -1,4 +1,4 @@
-gdown==4.6.4
+gdown
 pandas==1.5.2
 plotly==5.12.0
 sentence-transformers==2.2.2
