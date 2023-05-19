@@ -12,11 +12,11 @@ from sentence_transformers import SentenceTransformer
 def get_data():
     #simple
     ## statments
-    statements_url = 'https://drive.google.com/drive/folders/1kJLVteheTQcONEocW4gWlhgC5EOm_4qP?usp=sharing&confirm=t'
-    gdown.download_folder(statements_url, quiet=True, use_cookies=False)
+    statements_id = '1kJLVteheTQcONEocW4gWlhgC5EOm_4qP'
+    gdown.download_folder(statements_id, quiet=True, use_cookies=False)
     ## transcripts
-    transcript_url = 'https://drive.google.com/drive/folders/1LIl8jfzfrQQD6wkOYpvM0osYSt3dGog_?usp=sharing&confirm=t'
-    gdown.download_folder(transcript_url, quiet=True, use_cookies=False)
+    transcript_id = '1LIl8jfzfrQQD6wkOYpvM0osYSt3dGog_'
+    gdown.download_folder(transcript_id, quiet=True, use_cookies=False)
 
     #semantic
     model_url = 'https://drive.google.com/drive/folders/1iqutHw9dJGqSnRBgrdvegmWEJ-4najWN?usp=sharing&confirm=t'
