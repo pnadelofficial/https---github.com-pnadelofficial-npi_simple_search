@@ -9,9 +9,9 @@ from transformers import pipeline
 from sentence_transformers import SentenceTransformer
 import subprocess
 
-subprocess.run(['pip', 'install', '--upgrade', '--no-cache-dir', 'gdown'])
+#subprocess.run(['pip', 'install', '--upgrade', '--no-cache-dir', 'gdown'])
 
-@st.cache_resource
+#@st.cache_resource
 def get_data():
     #simple
     statements_url = 'https://drive.google.com/drive/folders/1kJLVteheTQcONEocW4gWlhgC5EOm_4qP?usp=sharing'
