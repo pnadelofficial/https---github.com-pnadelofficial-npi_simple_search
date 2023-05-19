@@ -7,6 +7,9 @@ import gdown
 from txtai.embeddings import Embeddings
 from transformers import pipeline
 from sentence_transformers import SentenceTransformer
+import subprocess
+
+subprocess.run(['pip', 'install', '--upgrade', '--no-cache-dir', 'gdown'])
 
 @st.cache_resource
 def get_data():
