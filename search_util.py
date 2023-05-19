@@ -11,12 +11,11 @@ from sentence_transformers import SentenceTransformer
 @st.cache_resource
 def get_data():
     #simple
-    ## statments
-    statements_id = '1kJLVteheTQcONEocW4gWlhgC5EOm_4qP'
-    gdown.download_folder(id=statements_id, quiet=True, use_cookies=False)
+    statements_url = 'https://drive.google.com/drive/folders/1kJLVteheTQcONEocW4gWlhgC5EOm_4qP?usp=sharing'
+    gdown.download_folder(statements_url, quiet=True, use_cookies=False)
     ## transcripts
-    transcript_id = '1LIl8jfzfrQQD6wkOYpvM0osYSt3dGog_'
-    gdown.download_folder(id=transcript_id, quiet=True, use_cookies=False)
+    transcript_url = 'https://drive.google.com/drive/folders/1LIl8jfzfrQQD6wkOYpvM0osYSt3dGog_?usp=sharing'
+    gdown.download_folder(transcript_url, quiet=True, use_cookies=False)
 
     #semantic
     model_url = 'https://drive.google.com/drive/folders/1iqutHw9dJGqSnRBgrdvegmWEJ-4najWN?usp=sharing&confirm=t'
