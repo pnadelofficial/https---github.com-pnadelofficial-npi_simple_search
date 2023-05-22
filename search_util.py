@@ -14,10 +14,10 @@ import subprocess
 @st.cache_resource
 def get_data():
     #simple
-    statements_url = 'https://drive.google.com/drive/folders/1kJLVteheTQcONEocW4gWlhgC5EOm_4qP?usp=sharing'
+    statements_url = 'https://drive.google.com/drive/folders/1HC90kBcGI_0fT25ao0b_BlWTpE2e_CP6?usp=sharing&confirm=t'
     gdown.download_folder(statements_url, quiet=True, use_cookies=False)
     ## transcripts
-    transcript_url = 'https://drive.google.com/drive/folders/1LIl8jfzfrQQD6wkOYpvM0osYSt3dGog_?usp=sharing'
+    transcript_url = 'https://drive.google.com/drive/folders/1LIl8jfzfrQQD6wkOYpvM0osYSt3dGog_?usp=sharing&confirm=t'
     gdown.download_folder(transcript_url, quiet=True, use_cookies=False)
 
     #semantic
@@ -42,7 +42,7 @@ def get_data():
     gdown.download(at_url, t_output, quiet=True, fuzzy=True)
     transcripts = pd.read_csv('all_transcripts_d.csv').rename(columns={'index':'org_index'}).dropna()
     ## statements
-    ast_url = 'https://drive.google.com/file/d/1MmKY3P4tUMP6IQkdBy6Eo8yGpnubTjBY/view?usp=sharing&confirm=t'
+    ast_url = 'https://drive.google.com/file/d/1UOdw6SsoGbMFWAFuUnaJ3yZoJvFpWlAF/view?usp=sharing&confirm=t'
     w_output = 'all_written_statements_d.csv'
     gdown.download(ast_url, w_output, quiet=True, fuzzy=True)
     written_statements = pd.read_csv('all_written_statements_d.csv').rename(columns={'index':'org_index'}).dropna()
@@ -54,10 +54,10 @@ def get_data():
     gdown.download(t_ref_url, t_ref_output, quiet=True, fuzzy=True)
     t_ref = pd.read_csv('transcript_reference_d.csv')
     ## statements
-    w_ref_url = 'https://drive.google.com/file/d/1WYsv6n-2hIlvE7GdziEmmg8ARNfc9VSA/view?usp=sharing&confirm=t'
+    w_ref_url = 'https://drive.google.com/file/d/1ysGvJKEqD12SNMOUFmhqAG46hPThV51V/view?usp=sharing&confirm=t'
     w_ref_output = 'ws_reference_d.csv'
     gdown.download(w_ref_url, w_ref_output, quiet=True, fuzzy=True)
-    w_ref = pd.read_csv('ws_reference_d.csv')
+    w_ref = pd.read_csv('ws_reference_d.csv').rename(columns={'fname':'filename'})
 
     # for sentiment analysis
 #     model_path = "cardiffnlp/twitter-xlm-roberta-base-sentiment"
