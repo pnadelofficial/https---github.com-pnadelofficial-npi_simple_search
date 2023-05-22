@@ -112,7 +112,7 @@ class Searcher:
 
     def show_data(self, org_id, text):
         '''Controls how the text is shown on the app'''
-        st.markdown(f'<small><b>{self.reference.iloc[org_id-1].filename}</b></small>',unsafe_allow_html=True)
+        st.markdown(f'<small><b>{self.reference.iloc[org_id].filename}</b></small>',unsafe_allow_html=True)
         if re.match('ANSWER:', text): 
             q_as = re.split('(?=ANSWER:)',text)
             for q_a in q_as:
