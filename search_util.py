@@ -21,20 +21,20 @@ def get_data():
     transcript_url = 'https://drive.google.com/drive/folders/1FDezT_xPLF0FxOOcnXoYgDGvJpMPwpfa?usp=sharing'
     gdown.download_folder(transcript_url, quiet=True, use_cookies=False)
 
-    #semantic
-    model_url = 'https://drive.google.com/drive/folders/1iqutHw9dJGqSnRBgrdvegmWEJ-4najWN?usp=sharing'
-    gdown.download_folder(model_url, quiet=True, use_cookies=False)
-    ss_model = SentenceTransformer('npi_ft542023_L12')
-    ## transcripts
-    transcript_sem_search_url = 'https://drive.google.com/drive/folders/1u5YABhLt-wv0iur-WSDR61uc7bhEkVbg?usp=sharing'
-    gdown.download_folder(transcript_sem_search_url, quiet=True, use_cookies=False)
-    t_embeddings = Embeddings()
-    t_embeddings.load("npi_transcript_sem_search_index_d")
-    ## statements
-    ws_sem_search_url = 'https://drive.google.com/drive/folders/12Ym7Ya1C1mzIlVvvOrv42pE3rV2dsf4j?usp=sharing'
-    gdown.download_folder(ws_sem_search_url, quiet=True, use_cookies=False)
-    w_embeddings = Embeddings()
-    w_embeddings.load("npi_ws_sem_search_index_d")
+#     #semantic
+#     model_url = 'https://drive.google.com/drive/folders/1iqutHw9dJGqSnRBgrdvegmWEJ-4najWN?usp=sharing'
+#     gdown.download_folder(model_url, quiet=True, use_cookies=False)
+#     ss_model = SentenceTransformer('npi_ft542023_L12')
+#     ## transcripts
+#     transcript_sem_search_url = 'https://drive.google.com/drive/folders/1u5YABhLt-wv0iur-WSDR61uc7bhEkVbg?usp=sharing'
+#     gdown.download_folder(transcript_sem_search_url, quiet=True, use_cookies=False)
+#     t_embeddings = Embeddings()
+#     t_embeddings.load("npi_transcript_sem_search_index_d")
+#     ## statements
+#     ws_sem_search_url = 'https://drive.google.com/drive/folders/12Ym7Ya1C1mzIlVvvOrv42pE3rV2dsf4j?usp=sharing'
+#     gdown.download_folder(ws_sem_search_url, quiet=True, use_cookies=False)
+#     w_embeddings = Embeddings()
+#     w_embeddings.load("npi_ws_sem_search_index_d")
 
     #org data
     ## transcripts
@@ -64,7 +64,7 @@ def get_data():
 #     model_path = "cardiffnlp/twitter-xlm-roberta-base-sentiment"
 #     sentiment_task = pipeline("sentiment-analysis", model=model_path, tokenizer=model_path)
 
-    return t_ref, w_ref, t_embeddings, w_embeddings, transcripts, written_statements
+    return t_ref, w_ref, transcripts, written_statements #t_embeddings, w_embeddings,
 
 class Searcher:
     """
