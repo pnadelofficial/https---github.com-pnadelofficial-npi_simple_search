@@ -12,7 +12,7 @@ if 'to_see' not in st.session_state:
 if 'start' not in st.session_state:
     st.session_state['start'] = 0
 
-t_ref, w_ref, t_embeddings, w_embeddings, transcripts, written_statements = search_util.get_data() #, sentiment_task
+t_ref, w_ref, transcripts, written_statements = search_util.get_data() #, sentiment_task  t_embeddings, w_embeddings,
 
 search = st.text_input('Search for a word or phrase')
 
