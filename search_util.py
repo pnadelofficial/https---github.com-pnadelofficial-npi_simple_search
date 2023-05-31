@@ -58,7 +58,7 @@ def get_data():
     w_ref_url = 'https://drive.google.com/file/d/1ysGvJKEqD12SNMOUFmhqAG46hPThV51V/view?usp=sharing'
     w_ref_output = 'ws_reference_d.csv'
     gdown.download(w_ref_url, w_ref_output, quiet=True, fuzzy=True)
-    w_ref = pd.read_csv('ws_reference_d.csv')
+    w_ref = pd.read_csv('ws_reference_d.csv').rename(columns={'fname':'filename'})
 
     # for sentiment analysis
 #     model_path = "cardiffnlp/twitter-xlm-roberta-base-sentiment"
