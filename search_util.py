@@ -15,7 +15,7 @@ import subprocess
 def get_data():
     #simple
     ## statments
-    statements_url = 'https://drive.google.com/drive/folders/1kJLVteheTQcONEocW4gWlhgC5EOm_4qP?usp=sharing'
+    statements_url = 'https://drive.google.com/drive/folders/1HC90kBcGI_0fT25ao0b_BlWTpE2e_CP6?usp=sharing'
     gdown.download_folder(statements_url, quiet=True, use_cookies=False)
     ## transcripts
     transcript_url = 'https://drive.google.com/drive/folders/1FDezT_xPLF0FxOOcnXoYgDGvJpMPwpfa?usp=sharing'
