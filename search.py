@@ -33,6 +33,8 @@ option = st.selectbox(
 # )
 
 sem_option = 'Simple Search'
+sa_option = 'No'
+
 if sem_option == 'Simple Search':
     if option == 'Transcripts':
         dirname = 'transcripts_index_dir'
