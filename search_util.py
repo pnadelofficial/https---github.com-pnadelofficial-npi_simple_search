@@ -55,7 +55,7 @@ def get_data():
     gdown.download(t_ref_url, t_ref_output, quiet=True, fuzzy=True)
     t_ref = pd.read_csv('transcript_reference_d.csv')
     ## statements
-    w_ref_url = 'https://drive.google.com/file/d/1WYsv6n-2hIlvE7GdziEmmg8ARNfc9VSA/view?usp=sharing'
+    w_ref_url = 'https://drive.google.com/file/d/1ysGvJKEqD12SNMOUFmhqAG46hPThV51V/view?usp=sharing'
     w_ref_output = 'ws_reference_d.csv'
     gdown.download(w_ref_url, w_ref_output, quiet=True, fuzzy=True)
     w_ref = pd.read_csv('ws_reference_d.csv')
