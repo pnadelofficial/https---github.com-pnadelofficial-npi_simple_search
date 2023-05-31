@@ -16,21 +16,21 @@ t_ref, w_ref, transcripts, written_statements = search_util.get_data() #, sentim
 
 search = st.text_input('Search for a word or phrase')
 
-sem_option = st.selectbox(
-    'Why type of search would you like to use?',
-    ('Simple Search', 'Semantic Search')
-)
+# sem_option = st.selectbox(
+#     'Why type of search would you like to use?',
+#     ('Simple Search', 'Semantic Search')
+# )
 
 option = st.selectbox(
     'What documents would you like to search in?',
     ('Transcripts', 'Written Statements')
 )
 
-st.write("Sentiment Analysis is not working (memory issues). Please do not select 'Yes' for the time being. -- PN")
-sa_option = st.selectbox(
-    'Would you like to add sentiment analysis scores?',
-    ('No', 'Yes')
-)
+# st.write("Sentiment Analysis is not working (memory issues). Please do not select 'Yes' for the time being. -- PN")
+# sa_option = st.selectbox(
+#     'Would you like to add sentiment analysis scores?',
+#     ('No', 'Yes')
+# )
 
 if sem_option == 'Simple Search':
     if option == 'Transcripts':
