@@ -43,7 +43,7 @@ def get_data():
     gdown.download(at_url, t_output, quiet=True, fuzzy=True)
     transcripts = pd.read_csv('all_transcripts_d.csv').rename(columns={'index':'org_index'}).dropna()
     ## statements
-    ast_url = 'https://drive.google.com/file/d/1MmKY3P4tUMP6IQkdBy6Eo8yGpnubTjBY/view?usp=sharing'
+    ast_url = 'https://drive.google.com/file/d/1UOdw6SsoGbMFWAFuUnaJ3yZoJvFpWlAF/view?usp=sharing' #'https://drive.google.com/file/d/1MmKY3P4tUMP6IQkdBy6Eo8yGpnubTjBY/view?usp=sharing'
     w_output = 'all_written_statements_d.csv'
     gdown.download(ast_url, w_output, quiet=True, fuzzy=True)
     written_statements = pd.read_csv('all_written_statements_d.csv').rename(columns={'index':'org_index'}).dropna()
